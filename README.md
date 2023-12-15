@@ -17,5 +17,7 @@ Example play for six moves of four-in-a-row
 This tic-tac-toe variation is played on a 5 x 5 grid. As in the traditional game, players are Xs or Os.
 Rules: Players take turns placing an X or an O in one of the squares until all the squares except one are filled. (Each player has 12 turns for a total of 24 squares.) 
 Winning: Count the number of three-in-a-rows each player has. Sequences can be vertically, horizontally, or diagonally. Whoever has the most, wins. Can one mark be counted in more than one three-in-a-row sequence? Decide ahead of time, yes or no. It is easier in implementation to allow counting more than once. 
+
+
 ![image](https://github.com/mr-70da/XO-games/assets/114266893/7a61436f-080e-4e64-b628-3c6f44f15294)
 
