@@ -1,6 +1,10 @@
-//
-// Created by acer on 12/13/2023.
-//
+// Author1 and ID and Group: Mahmoud Ayman Ramadan ID:20220313 Email:man3092003city@gmail.com Group:S6.
+// Author2 and ID and Group: Hassan Sherif Elkersh ID:20220112 Email:1243hassan@gmail.com     Group:S6.
+// FCAI – OOP Programming – 2023 - Assignment 3-XO 5x5 Game.
+// Program Name:            xxxxxx.cpp
+// Last Modification Date:    6/12/2023
+// Teaching Assistant:        xxxxx xxxxx
+// Purpose: mastering OOP concepts.
 
 #ifndef XO_OOP_WRANDOM_X_O_5X5BOARD_H
 #define XO_OOP_WRANDOM_X_O_5X5BOARD_H
