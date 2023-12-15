@@ -1,7 +1,14 @@
+// Author1 and ID and Group: Mahmoud Ayman Ramadan ID:20220313 Email:man3092003city@gmail.com Group:S6.
+// Author2 and ID and Group: Hassan Sherif Elkersh ID:20220112 Email:1243hassan@gmail.com     Group:S6.
+// FCAI – OOP Programming – 2023 - Assignment 3-XO 5x5 Game.
+// Program Name:              main.cpp
+// Last Modification Date:    15/12/2023
+// Purpose: mastering OOP concepts.
 #include "X_O_5x5board.h"
 #include "X_O_Pyramid_Board.h"
 #include "Four_in_arow.h"
 void menu(char& game){
+    //asking user for the game he want.
     cout<<"Choose a game to play:\n"
           "1- 3x3 XO \n"
           "2- Pyramid XO\n"
@@ -9,6 +16,7 @@ void menu(char& game){
           "4- 5x5 XO\n";
     cin>>game;
     switch (game) {
+        //check validtiy of the choice
         case '1':
         case '2':
         case '3':
@@ -25,6 +33,7 @@ void menu(char& game){
     }
 }
 int main() {
+    //create two players
     int choice;
     Player *players[2];
     players[0] = new Player(1, 'x');
@@ -34,6 +43,7 @@ int main() {
     cin >> choice;
     char game;
     menu(game);
+    //if choice equal 1 create random COm player.
     if (choice != 1)
         players[1] = new Player(2, 'o');
     else
