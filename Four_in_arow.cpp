@@ -6,38 +6,38 @@
 // Teaching Assistant:        xxxxx xxxxx
 // Purpose: mastering OOP concepts.
 #include "Four_in_arow.h"
-
 using namespace std;
 Four_in_arow::Four_in_arow() {
-    n_rows =  6,n_cols=7;
-    board = new char*[n_rows] ;
+    n_rows =  6, n_cols=7;
+    board = new char*[n_rows];
     for (int i = 0; i < n_rows; i++) {
-        board[i] = new char[n_cols] ;
+        board[i] = new char[n_cols];
         for (int j = 0; j < n_cols; j++){
             board[i][j] = 0;
             possible[i][j]=0;
         }
     }
-    for(int i=0;i<n_cols;i++) possible[6][i]=1;
+    for(int i=0;i<n_cols;i++) possible[6][i] = 1;
 }
 
 bool Four_in_arow::update_board (int x, int y, char mark){
     // Only update if move is valid
     if (!(x < 0 || x > 5 || y < 0 || y > 6) && (board[x][y] == 0)&&(possible[x+1][y])) {
         board[x][y] = (char)toupper(mark);
-        possible[x][y]=1;
+        possible[x][y] = 1;
         n_moves++;
         return true;
     }
-    else{
+    else {
 
-        return false;}
+        return false;
+    }
 }
 
 void Four_in_arow::display_board() {
-    for (int i: {0,1,2,3,4,5}) {
+    for (int i : { 0, 1, 2, 3, 4, 5}) {
         cout << "\n ";
-        for (int j: {0,1,2,3,4,5,6}) {
+        for (int j : { 0, 1, 2, 3, 4, 5, 6}) {
             cout << "|  (" << i << "," << j << ")";
             cout << setw(2) << board[i][j] << " |";
         }
@@ -53,10 +53,10 @@ bool Four_in_arow::is_winner() {
     // Check Rows
     for (int i = 0; i < n_rows; i++) {
         for (int j = 0; j < n_cols - 3; j++) {
-            if (board[i][j]==board[i][j+1]
-                &&board[i][j]==board[i][j+2]
-                &&board[i][j]==board[i][j+3]
-                &&(board[i][j]=='X'||board[i][j]=='O')) {
+            if (board[i][j] == board[i][j+1]
+                &&board[i][j] == board[i][j+2]
+                &&board[i][j] == board[i][j+3]
+                &&(board[i][j]= = 'X'|| board[i][j] == 'O')) {
                 return true;
             }
         }
@@ -80,7 +80,7 @@ bool Four_in_arow::is_winner() {
             if (board[i][j] == board[i + 1][j + 1]
                 &&board[i][j] == board[i + 2][j + 2]
                 && board[i][j] == board[i + 3][j + 3]
-                && (board[i][j]=='X'||board[i][j]=='O') ) {
+                && (board[i][j] == 'X'|| board[i][j] == 'O') ) {
                 return true;
             }
         }
@@ -92,15 +92,13 @@ bool Four_in_arow::is_winner() {
             if (board[i][j] == board[i + 1][j - 1]
                 && board[i][j] == board[i + 2][j - 2]
                 && board[i][j] == board[i + 3][j - 3]
-                && (board[i][j]=='X'||board[i][j]=='O')  ) {
+                && (board[i][j] == 'X'|| board[i][j] == 'O')) {
                 return true;
             }
         }
     }
-
     return false;
 }
-
 // Return true if 9 moves are done and no winner
 bool Four_in_arow::is_draw() {
     return (n_moves == 42 && !is_winner());
@@ -115,7 +113,7 @@ Four_in_arow::~Four_in_arow() {
 }
 
 
-RandomPlayer2::RandomPlayer2(char symbol, int dimension, int dimension2) : RandomPlayer(symbol , dimension) {
+RandomPlayer2::RandomPlayer2(char symbol, int dimension, int dimension2) : RandomPlayer(symbol, dimension){
     this -> dimension2= dimension2 ;
 }
 
